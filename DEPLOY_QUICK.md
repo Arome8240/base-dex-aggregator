@@ -29,6 +29,12 @@ forge script script/Deploy.s.sol \
   --verify \
   --etherscan-api-key $BASESCAN_API_KEY \
   -vvvv
+
+  forge create script/Deploy.s.sol --rpc-url $BASE_SEPOLIA_RPC_URL \
+    --private-key $PRIVATE_KEY \
+    --broadcast \
+    --etherscan-api-key $BASESCAN_API_KEY \
+    --verify
 ```
 
 ### 3. Save Addresses
