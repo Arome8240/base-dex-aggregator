@@ -73,9 +73,9 @@ Use this checklist to ensure a smooth deployment to Base Sepolia.
 ### Verification
 
 - [ ] Contracts verified on Basescan
-  - [ ] VenueManager: https://sepolia.basescan.org/address/0x...
-  - [ ] OracleManager: https://sepolia.basescan.org/address/0x...
-  - [ ] PerpAggregator: https://sepolia.basescan.org/address/0x...
+  - [ ] VenueManager: https://sepolia.basescan.org/address/0x6Eb5575aF121835A95799CAE6FD3f18aA56c721C
+  - [ ] OracleManager: https://sepolia.basescan.org/address/0xa720a92c391C87BFc9583258b154Ba21cb89f311
+  - [ ] PerpAggregator: https://sepolia.basescan.org/address/0xA73B526e04e11E0116eb28ec0698AfDB7a487c2D
 - [ ] Contract source code visible on Basescan
 - [ ] Read/Write functions accessible on Basescan
 
@@ -215,7 +215,7 @@ cast receipt TX_HASH --rpc-url $BASE_SEPOLIA_RPC_URL
 
 ---
 
-**Deployment Date**: ******\_\_\_******
-**Deployed By**: ******\_\_\_******
+**Deployment Date**: **\*\***\_\_\_**\*\***
+**Deployed By**: **\*\***\_\_\_**\*\***
 **Network**: Base Sepolia (Chain ID: 84532)
 **Status**: ⬜ Not Started | ⬜ In Progress | ⬜ Complete
