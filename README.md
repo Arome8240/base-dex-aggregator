@@ -65,21 +65,31 @@ forge coverage
 
 ## 🚀 Deployment
 
-### Prerequisites
-
-- Foundry installed
-- Base RPC endpoint
-- Deployer wallet with ETH on Base
-
-### Deploy Script
+### Quick Deploy to Base Sepolia
 
 ```bash
-# Deploy to Base mainnet
-forge script script/Deploy.s.sol --rpc-url $BASE_RPC_URL --broadcast --verify
+# 1. Setup environment
+cp .env.example .env
+# Edit .env with your PRIVATE_KEY and RPC URL
 
-# Deploy to Base Sepolia testnet
-forge script script/Deploy.s.sol --rpc-url $BASE_SEPOLIA_RPC_URL --broadcast --verify
+# 2. Deploy
+source .env
+forge script script/Deploy.s.sol \
+  --rpc-url $BASE_SEPOLIA_RPC_URL \
+  --broadcast \
+  --verify \
+  --etherscan-api-key $BASESCAN_API_KEY
 ```
+
+### Detailed Guides
+
+- **Quick Reference**: [DEPLOY_QUICK.md](DEPLOY_QUICK.md) - 5-minute deployment
+- **Complete Guide**: [DEPLOYMENT.md](DEPLOYMENT.md) - Full instructions with troubleshooting
+
+### Get Base Sepolia ETH
+
+- Coinbase Faucet: https://portal.cdp.coinbase.com/products/faucet
+- Alchemy Faucet: https://www.alchemy.com/faucets/base-sepolia
 
 ## 📖 Usage
 

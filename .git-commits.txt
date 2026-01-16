@@ -1,0 +1,115 @@
+# Copy and paste these commit messages as you build the project incrementally
+
+# Commit 1
+feat: add core interfaces for venue and oracle integration
+
+- Add IVenue interface with standard perp DEX methods
+- Add IOracle interface for Chainlink-style price feeds
+- Add IPerpAggregator interface for main aggregator contract
+- Define events for position lifecycle tracking
+
+# Commit 2
+feat: implement oracle manager for price validation
+
+- Add OracleManager contract with Chainlink-style integration
+- Implement price staleness checks (15 min max age)
+- Add configurable price deviation limits (default 5%)
+- Validate execution prices against oracle feeds
+- Prevent price manipulation attacks
+
+# Commit 3
+feat: implement venue manager for DEX registry
+
+- Add VenueManager contract for venue registration
+- Support venue metadata (max leverage, fees, name)
+- Implement active/inactive venue status management
+- Add owner-only access controls
+- Emit events for venue lifecycle changes
+
+# Commit 4
+feat: implement perp aggregator with venue routing
+
+- Add PerpAggregator main contract
+- Implement openPosition with best venue selection
+- Implement closePosition, increasePosition, reducePosition
+- Add reentrancy protection on all state-changing functions
+- Implement deadline and slippage protection
+- Add pausable emergency controls
+- Integrate oracle price validation
+- Select best venue based on price and fees
+
+# Commit 5
+test: add mock contracts for testing
+
+- Add MockVenue implementing IVenue interface
+- Add MockOracle implementing IOracle interface
+- Support configurable prices and fees
+- Enable forced revert scenarios for testing
+
+# Commit 6
+test: add comprehensive oracle manager tests
+
+- Test oracle registration and price retrieval
+- Test stale price detection
+- Test price deviation validation
+- Test access controls
+- Add fuzz tests for price validation
+- Test custom deviation limits
+
+# Commit 7
+test: add comprehensive venue manager tests
+
+- Test venue registration and removal
+- Test venue status management
+- Test active venue filtering
+- Test access controls
+- Test invalid input handling
+- Add fuzz tests for venue parameters
+
+# Commit 8
+test: add comprehensive aggregator tests
+
+- Test full position lifecycle (open/increase/reduce/close)
+- Test venue selection algorithm
+- Test slippage protection
+- Test deadline expiration
+- Test pause/unpause functionality
+- Test oracle price validation integration
+- Test leverage limit enforcement
+- Add fuzz tests for position parameters
+
+# Commit 9
+test: add end-to-end integration tests
+
+- Test full position lifecycle with price movements
+- Test venue selection with multiple venues
+- Test oracle price protection
+- Test leverage limit routing
+- Add detailed logging for test scenarios
+
+# Commit 10
+feat: add deployment script for base mainnet
+
+- Add Deploy.s.sol script
+- Deploy VenueManager, OracleManager, PerpAggregator
+- Log deployment addresses
+- Support environment variable configuration
+
+# Commit 11
+docs: add comprehensive readme and documentation
+
+- Add README with architecture overview
+- Document all contract functions and usage
+- Add deployment instructions
+- Document security features
+- Add admin function examples
+- List assumptions and future enhancements
+- Add PROJECT_STRUCTURE.md with diagrams
+- Add COMMITS.md with commit structure
+- Add SUMMARY.md with project stats
+
+# Commit 12
+chore: remove default counter contracts from forge init
+
+- Remove Counter.sol, Counter.t.sol, Counter.s.sol
+- Clean up unused default files
